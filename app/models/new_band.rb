@@ -1,0 +1,2 @@
+class NewBand < ApplicationRecord
+end

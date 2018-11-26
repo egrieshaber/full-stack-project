@@ -39,13 +39,14 @@ class MetalHedsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_metal_hed
-      @metal_hed = MetalHed.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def metal_hed_params
-      params.require(:metal_hed).permit(:first_name, :last_name, :instrument, :band)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_metal_hed
+    @metal_hed = MetalHed.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def metal_hed_params
+    params.require(:metal_hed).permit(:first_name, :last_name, :instrument, :band)
+  end
 end
