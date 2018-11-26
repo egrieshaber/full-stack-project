@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class NewBandsController < ApplicationController
-  before_action :set_new_band, only: [:show, :update, :destroy]
+  before_action :set_new_band, only: %i[show update destroy]
 
   # GET /new_bands
   def index
@@ -39,13 +41,14 @@ class NewBandsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_new_band
-      @new_band = NewBand.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def new_band_params
-      params.require(:new_band).permit(:band_name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_new_band
+    @new_band = NewBand.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def new_band_params
+    params.require(:new_band).permit(:band_name)
+  end
 end

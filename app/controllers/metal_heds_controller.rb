@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class MetalHedsController < ApplicationController
-  before_action :set_metal_hed, only: [:show, :update, :destroy]
+  before_action :set_metal_hed, only: %i[show update destroy]
 
   # GET /metal_heds
   def index
