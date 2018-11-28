@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class NewBandsController < ApplicationController
+class NewBandsController < OpenReadController
   before_action :set_new_band, only: %i[show update destroy]
 
   # GET /new_bands
@@ -17,7 +17,8 @@ class NewBandsController < ApplicationController
 
   # POST /new_bands
   def create
-    @new_band = NewBand.new(new_band_params)
+  # @new_band = NewBand.new(new_band_params)
+  @new_band = current_user.new_bands.build(new_band_params)
 
     if @new_band.save
       render json: @new_band, status: :created, location: @new_band
@@ -29,6 +30,7 @@ class NewBandsController < ApplicationController
   # PATCH/PUT /new_bands/1
   def update
     if @new_band.update(new_band_params)
+    # if @new_band == current_user.new_bands.update(new_band_params)
       render json: @new_band
     else
       render json: @new_band.errors, status: :unprocessable_entity
@@ -44,7 +46,8 @@ class NewBandsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_new_band
-    @new_band = NewBand.find(params[:id])
+    # @new_band = NewBand.find(params[:id])
+    @new_band = current_user.new_bands.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

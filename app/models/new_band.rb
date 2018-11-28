@@ -2,4 +2,5 @@
 
 class NewBand < ApplicationRecord
   has_many :metal_heds
+  belongs_to :user
 end
