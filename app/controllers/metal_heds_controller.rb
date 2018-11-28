@@ -49,6 +49,6 @@ class MetalHedsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def metal_hed_params
-    params.require(:metal_hed).permit(:first_name, :last_name, :instrument, :band)
+    params.require(:metal_hed).permit(:first_name, :last_name, :instrument, :band, :new_band_id)
   end
 end

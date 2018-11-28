@@ -7,6 +7,7 @@ curl --include --request POST "http://localhost:4741/metal_heds" \
     "first_name": "'"${FIRST}"'",
     "last_name": "'"${LAST}"'",
     "instrument": "'"${INSTRUMENT}"'",
-    "band": "'"${BAND}"'"
+    "band": "'"${BAND}"'",
+    "new_band_id": "'"${ID}"'"
   }
 }'

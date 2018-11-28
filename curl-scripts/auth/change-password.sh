@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://metalhedz.herokuapp.com/change-password" \
+curl "http://localhost:4741/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \
