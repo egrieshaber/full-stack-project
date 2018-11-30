@@ -29,6 +29,7 @@ class NewBandsController < OpenReadController
 
   # PATCH/PUT /new_bands/1
   def update
+    # if @new_band = current_user.new_bands.update(new_band_params)
     if @new_band.update(new_band_params)
     # if @new_band == current_user.new_bands.update(new_band_params)
       render json: @new_band
@@ -53,5 +54,6 @@ class NewBandsController < OpenReadController
   # Only allow a trusted parameter "white list" through.
   def new_band_params
     params.require(:new_band).permit(:band_name)
+    # params.require(:new_band).permit(:id)
   end
 end
