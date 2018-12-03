@@ -29,11 +29,15 @@ class NewBandsController < OpenReadController
 
   # PATCH/PUT /new_bands/1
   def update
+    # @new_band = NewBand.find(params[:id])
     # if @new_band = current_user.new_bands.update(new_band_params)
+    # binding.pry
     if @new_band.update(new_band_params)
     # if @new_band == current_user.new_bands.update(new_band_params)
+    # binding.pry
       render json: @new_band
     else
+      # binding.pry
       render json: @new_band.errors, status: :unprocessable_entity
     end
   end
@@ -47,8 +51,8 @@ class NewBandsController < OpenReadController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_new_band
-    # @new_band = NewBand.find(params[:id])
-    @new_band = current_user.new_bands.find(params[:id])
+  # @new_band = NewBand.find(params[:id])
+  @new_band = current_user.new_bands.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

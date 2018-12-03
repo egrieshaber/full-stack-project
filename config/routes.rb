@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # patch '/metal_heds/:id' => 'metal_heds#update'
   # delete '/metal_heds/:id' => 'metal_heds#destroy'
   #
-  # # new_bands routes
+  # new_bands routes
   # get '/new_bands' => 'new_bands#index'
   # get '/new_bands/:id' => 'new_bands#show'
   # post '/new_bands' => 'new_bands#create'
