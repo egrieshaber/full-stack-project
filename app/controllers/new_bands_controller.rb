@@ -44,6 +44,7 @@ class NewBandsController < OpenReadController
 
   # DELETE /new_bands/1
   def destroy
+    # binding.pry
     @new_band.destroy
   end
 
@@ -51,8 +52,8 @@ class NewBandsController < OpenReadController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_new_band
-  # @new_band = NewBand.find(params[:id])
-  @new_band = current_user.new_bands.find(params[:id])
+    # @new_band = NewBand.find(params[:id])
+    @new_band = current_user.new_bands.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
