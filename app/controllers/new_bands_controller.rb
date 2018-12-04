@@ -12,6 +12,8 @@ class NewBandsController < OpenReadController
 
   # GET /new_bands/1
   def show
+    @new_band.update(new_band_params)
+
     render json: @new_band
   end
 
