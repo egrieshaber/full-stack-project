@@ -38,6 +38,6 @@ Unsolved Issues.
 
 Deployed Client site: https://egrieshaber.github.io/full-stack-project-front-end/
 
-Deploed Server: https://metalhedz.herokuapp.com/
+Deployed Server: https://metalhedz.herokuapp.com/
 
 Server Repo: https://github.com/egrieshaber/full-stack-project
